@@ -1,0 +1,294 @@
+:root {
+  --bg: #0b1220;
+  --panel: #0f1a2f;
+  --text: #e9eefc;
+  --muted: #b6c2e2;
+  --primary: #4cc3ff;
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --radius: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    Arial,
+    sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* Accessibilité */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+}
+
+.skip-link:focus {
+  left: 16px;
+  top: 16px;
+  z-index: 1000;
+  background: white;
+  color: black;
+  padding: 8px 12px;
+  border-radius: 8px;
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.logo {
+  color: var(--primary);
+  font-size: 18px;
+}
+
+.brand__name {
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+/* Navigation */
+
+.nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav a {
+  color: var(--muted);
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+
+.nav a:hover {
+  background: rgba(76, 195, 255, 0.12);
+  color: var(--text);
+}
+
+.nav a:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Layout principal */
+
+.layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: var(--space-2);
+  padding: var(--space-2);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.sidebar {
+  background: var(--panel);
+  border-radius: var(--radius);
+  padding: var(--space-2);
+}
+
+.sidebar__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar__list li {
+  margin-bottom: 12px;
+}
+
+.sidebar__list a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.sidebar__list a:hover {
+  color: var(--primary);
+}
+
+.main {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.panel {
+  background: var(--panel);
+  border-radius: var(--radius);
+  padding: var(--space-2);
+}
+
+/* Cartes */
+
+.cards {
+  display: grid;
+  gap: var(--space-2);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius);
+  padding: var(--space-2);
+
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    background 160ms ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(76, 195, 255, 0.35);
+  background: rgba(76, 195, 255, 0.06);
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+@media (min-width: 900px) {
+  .featured {
+    grid-column: span 2;
+  }
+}
+
+/* Boutons */
+
+.btn {
+  margin-top: 8px;
+  padding: 10px 12px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--primary);
+  color: #031019;
+  font-weight: 700;
+  cursor: pointer;
+
+  transition:
+    transform 160ms ease,
+    filter 160ms ease;
+}
+
+.btn:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+.btn:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
+/* Statistiques */
+
+.stats {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.stat {
+  flex: 1;
+  min-width: 120px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: var(--radius);
+  padding: var(--space-2);
+}
+
+.stat__n {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.stat__l {
+  display: block;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+/* Footer */
+
+.footer {
+  padding: var(--space-2);
+  text-align: center;
+  color: var(--muted);
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 220px 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav__list {
+    flex-direction: column;
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "main"
+      "sidebar";
+  }
+
+  .main {
+    grid-area: main;
+  }
+
+  .sidebar {
+    grid-area: sidebar;
+  }
+}
+
+/* Réduction des animations */
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .btn {
+    transition: none;
+  }
+
+  .card:hover,
+  .btn:hover {
+    transform: none;
+  }
+}

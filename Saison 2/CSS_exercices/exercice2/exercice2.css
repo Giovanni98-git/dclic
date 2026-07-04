@@ -1,0 +1,25 @@
+.container {
+  background-color: #e0e0e0;
+  padding: 15px;
+}
+
+.box {
+  border: 1px solid black;
+  background-color: white;
+}
+
+.box-highlight {
+  color: blue;
+}
+
+.list-item {
+  color: green;
+}
+
+div {
+  margin: 10px;
+}
+
+p {
+  color: red;
+}

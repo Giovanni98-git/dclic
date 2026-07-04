@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exercice 1 - String</title>
+  </head>
+  <body>
+    <h2>Manipulation de chaînes</h2>
+
+    <input
+      type="text"
+      id="texte"
+      placeholder="Saisissez une chaîne"
+      oninput="analyserTexte()"
+    />
+
+    <p id="longueur"></p>
+    <p id="sousChaine"></p>
+
+    <script>
+      function analyserTexte() {
+        let texte = document.getElementById("texte").value;
+
+        document.getElementById("longueur").textContent =
+          "Longueur : " + texte.length;
+
+        document.getElementById("sousChaine").textContent =
+          "3 premiers caractères : " + texte.substring(0, 3);
+      }
+    </script>
+  </body>
+</html>

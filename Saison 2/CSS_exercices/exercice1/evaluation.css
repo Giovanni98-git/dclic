@@ -1,0 +1,21 @@
+body {
+  background-color: whitesmoke;
+}
+
+.highlight {
+  color: blue;
+  font-weight: bold;
+}
+
+li {
+  color: green;
+}
+
+.special {
+  border: 2px solid black;
+  background-color: gray;
+}
+
+#first-item {
+  background-color: yellow;
+}

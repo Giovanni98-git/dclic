@@ -1,0 +1,31 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 24px;
+}
+.container {
+  max-width: 760px;
+}
+.bloc {
+  border: 1px solid #ddd;
+  padding: 16px;
+  border-radius: 8px;
+  margin: 12px 0;
+}
+.btn {
+  padding: 8px 12px;
+  cursor: pointer;
+  margin-right: 8px;
+}
+.hidden {
+  display: none;
+}
+.msg {
+  font-weight: 700;
+  margin-top: 10px;
+}
+.error {
+  color: #b00020;
+}
+.ok {
+  color: #1b5e20;
+}

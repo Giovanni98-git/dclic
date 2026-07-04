@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Atelier DOM & événements</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Atelier DOM & événements</h1>
+    <main class="container">
+      <section class="bloc" id="exA1">
+        <h2>A1 — Toggle</h2>
+        <button class="btn" id="btnToggle">Afficher/Masquer</button>
+        <p id="texteToggle" class="hidden">
+          Bonjour ! Ce contenu peut être affiché ou masqué.
+        </p>
+      </section>
+      <section class="bloc" id="exA2">
+        <h2>A2 — Compteur</h2>
+        <p>Valeur : <span id="count">0</span></p>
+        <button class="btn" id="plus">+1</button>
+        <button class="btn" id="moins">-1</button>
+        <button class="btn" id="reset">Reset</button>
+      </section>
+      <section class="bloc" id="exA3">
+        <h2>A3 — Saisie en direct</h2>
+        <label for="txt">Texte (min 5 caractères) :</label>
+        <input id="txt" type="text" placeholder="Tapez ici..." />
+        <p>Longueur : <span id="len">0</span></p>
+        <p id="msgA3" class="msg"></p>
+      </section>
+      <section class="bloc" id="exA4">
+        <h2>A4 — Formulaire</h2>
+        <form id="formA4">
+          <div>
+            <label for="nom">Nom :</label>
+            <input id="nom" type="text" required />
+          </div>
+          <div>
+            <label for="email">Email :</label>
+            <input id="email" type="text" required />
+          </div>
+          <button class="btn" type="submit">Envoyer</button>
+        </form>
+        <p id="msgA4" class="msg"></p>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exercice 5 - Tableaux</title>
+  </head>
+  <body>
+    <h2>Manipulation de tableaux</h2>
+
+    <p id="resultat"></p>
+
+    <script>
+      let nombres = [5, 12, 3, 9];
+
+      nombres.push(7);
+      nombres.splice(1, 1);
+      nombres.sort((a, b) => a - b);
+
+      document.getElementById("resultat").textContent =
+        "Tableau trié : " + nombres.join(", ");
+    </script>
+  </body>
+</html>

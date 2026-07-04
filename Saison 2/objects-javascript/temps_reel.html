@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Horloge en temps réel</title>
+  </head>
+  <body>
+    <h2>Horloge</h2>
+
+    <input type="text" id="heure" readonly />
+
+    <script>
+      function afficherHeure() {
+        let maintenant = new Date();
+
+        let h = String(maintenant.getHours()).padStart(2, "0");
+        let m = String(maintenant.getMinutes()).padStart(2, "0");
+        let s = String(maintenant.getSeconds()).padStart(2, "0");
+
+        document.getElementById("heure").value = h + ":" + m + ":" + s;
+
+        setTimeout(afficherHeure, 1000);
+      }
+
+      afficherHeure();
+    </script>
+  </body>
+</html>

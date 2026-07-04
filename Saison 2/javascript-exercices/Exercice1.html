@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exercice 1</title>
+  </head>
+  <body>
+    <h1>Exercice 1</h1>
+
+    <script>
+      //1 - Vérifier l’âge (mineur ou majeur)
+
+      let age = prompt("Entrez votre âge :");
+      age = Number(age);
+
+      if (age < 18) {
+        alert("Vous êtes mineur.");
+      } else {
+        alert("Vous êtes majeur.");
+      }
+
+      //2 - Vérifier si un nombre est pair ou impair
+      let nombre = prompt("Entrez un nombre :");
+      nombre = Number(nombre);
+
+      if (nombre % 2 === 0) {
+        alert("Le nombre est pair.");
+      } else {
+        alert("Le nombre est impair.");
+      }
+
+      //3 - Afficher le nom du mois en fonction du numéro
+      let mois = Number(prompt("Entrez le numéro du mois (1-12) :"));
+
+      const moisNoms = [
+        "Janvier",
+        "Février",
+        "Mars",
+        "Avril",
+        "Mai",
+        "Juin",
+        "Juillet",
+        "Août",
+        "Septembre",
+        "Octobre",
+        "Novembre",
+        "Décembre",
+      ];
+
+      if (mois >= 1 && mois <= 12) {
+        alert("Le mois est : " + moisNoms[mois - 1]);
+      } else {
+        alert("Mois invalide");
+      }
+    </script>
+  </body>
+</html>

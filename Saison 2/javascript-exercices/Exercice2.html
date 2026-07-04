@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exercice 2</title>
+  </head>
+  <body>
+    <h1>Exercice 2</h1>
+    <script>
+      // 1 - Afficher les nombres de 1 à 10
+      for (let i = 1; i <= 10; i++) {
+        console.log(i);
+      }
+
+      // 2 - Calculer la somme des nombres de 1 à 100
+      let somme = 0;
+      let i = 1;
+
+      while (i <= 100) {
+        somme += i;
+        i++;
+      }
+
+      alert("La somme est : " + somme);
+
+      // 3- Jeu de nombre secret
+      const secret = Math.floor(Math.random() * 100) + 1;
+      let essai;
+
+      do {
+        essai = Number(prompt("Devinez le nombre (1-100) :"));
+
+        if (essai < secret) {
+          alert("Plus grand !");
+        } else if (essai > secret) {
+          alert("Plus petit !");
+        }
+      } while (essai !== secret);
+
+      alert("Bravo ! Vous avez trouvé le nombre.");
+
+      // 4 - Suite de Fibonacci
+      let N = Number(prompt("Entrez le nombre de termes :"));
+
+      let a = 0,
+        b = 1;
+      let resultat = a + ", " + b;
+
+      for (let i = 3; i <= N; i++) {
+        let c = a + b;
+        resultat += ", " + c;
+        a = b;
+        b = c;
+      }
+
+      alert("Fibonacci : " + resultat);
+    </script>
+  </body>
+</html>

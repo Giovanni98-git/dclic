@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exercice 3 - Date</title>
+  </head>
+  <body>
+    <h2>Manipulation des dates</h2>
+
+    <input type="text" id="dateInput" placeholder="JJ-MM-AAAA" />
+    <button onclick="traiterDate()">Valider</button>
+
+    <p id="jour"></p>
+    <p id="mois"></p>
+    <p id="annee"></p>
+    <p id="difference"></p>
+
+    <script>
+      function traiterDate() {
+        let valeur = document.getElementById("dateInput").value;
+        let parties = valeur.split("-");
+
+        let date = new Date(parties[2], parties[1] - 1, parties[0]);
+        let aujourdHui = new Date();
+
+        document.getElementById("jour").textContent =
+          "Jour : " + date.getDate();
+        document.getElementById("mois").textContent =
+          "Mois : " + (date.getMonth() + 1);
+        document.getElementById("annee").textContent =
+          "Année : " + date.getFullYear();
+
+        let diffTemps = aujourdHui - date;
+        let diffJours = Math.floor(diffTemps / (1000 * 60 * 60 * 24));
+
+        document.getElementById("difference").textContent =
+          "Différence en jours : " + diffJours;
+      }
+    </script>
+  </body>
+</html>

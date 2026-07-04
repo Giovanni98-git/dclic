@@ -1,0 +1,44 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  transition:
+    background 0.3s,
+    color 0.3s;
+}
+
+/* Thème jour */
+.jour {
+  background: #eeeeee;
+  color: #000000;
+}
+
+/* Thème nuit */
+.nuit {
+  background: #000000;
+  color: #ffffff;
+}
+
+/* Thème bleu */
+.bleu {
+  background: #0b1f3a;
+  color: #d6e8ff;
+}
+
+/* Thème vert */
+.vert {
+  background: #0f2e1a;
+  color: #d7ffe3;
+}
+
+/* Thème contrasté */
+.contraste {
+  background: #ffffff;
+  color: #000000;
+  font-weight: bold;
+}
+
+button {
+  margin-right: 10px;
+  padding: 10px 12px;
+  cursor: pointer;
+}

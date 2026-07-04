@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Volet A — Grid/Flex</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link"> Aller au contenu principal </a>
+
+    <header class="header">
+      <div class="brand">
+        <span class="logo" aria-hidden="true">◆</span>
+        <span class="brand__name">Mon Interface</span>
+      </div>
+
+      <nav class="nav" aria-label="Navigation principale">
+        <ul class="nav__list">
+          <li><a href="#overview">Aperçu</a></li>
+          <li><a href="#cards">Cartes</a></li>
+          <li><a href="#stats">Statistiques</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="layout">
+      <aside class="sidebar" aria-label="Menu secondaire">
+        <h2 class="sidebar__title">Menu</h2>
+
+        <ul class="sidebar__list">
+          <li><a href="#overview">Tableau de bord</a></li>
+          <li><a href="#cards">Éléments</a></li>
+          <li><a href="#stats">Rapports</a></li>
+        </ul>
+      </aside>
+
+      <main id="main-content" class="main">
+        <section id="overview" class="panel">
+          <h1>Interface moderne (Grid + Flex)</h1>
+          <p>Objectif : layout responsive, clair et performant.</p>
+        </section>
+
+        <section id="cards" class="panel">
+          <h2>Cartes</h2>
+
+          <div class="cards">
+            <article class="card featured">
+              <h3>Carte mise en avant</h3>
+              <p>Occupe plus d’espace sur desktop.</p>
+              <button type="button" class="btn">Action</button>
+            </article>
+
+            <article class="card">
+              <h3>Carte 1</h3>
+              <p>Contenu…</p>
+            </article>
+
+            <article class="card">
+              <h3>Carte 2</h3>
+              <p>Contenu…</p>
+            </article>
+
+            <article class="card">
+              <h3>Carte 3</h3>
+              <p>Contenu…</p>
+            </article>
+
+            <article class="card">
+              <h3>Carte 4</h3>
+              <p>Contenu…</p>
+            </article>
+
+            <article class="card">
+              <h3>Carte 5</h3>
+              <p>Contenu…</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="stats" class="panel">
+          <h2>Statistiques</h2>
+
+          <div class="stats">
+            <div class="stat">
+              <span class="stat__n">24</span>
+              <span class="stat__l">Tâches</span>
+            </div>
+
+            <div class="stat">
+              <span class="stat__n">8</span>
+              <span class="stat__l">Projets</span>
+            </div>
+
+            <div class="stat">
+              <span class="stat__n">96%</span>
+              <span class="stat__l">Score</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" class="panel">
+          <h2>Contact</h2>
+          <p>Section d’exemple pour tester la navigation par ancres.</p>
+        </section>
+      </main>
+    </div>
+
+    <footer class="footer">
+      <small>© 2026 — Volet A Grid/Flex</small>
+    </footer>
+  </body>
+</html>

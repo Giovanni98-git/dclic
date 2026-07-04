@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gestion Client</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <form name="F">
+      <fieldset style="background: #ffffdd">
+        <legend style="background: #ffff88">
+          <b>Client</b>
+        </legend>
+
+        <table width="100%" cellpadding="5">
+          <tr>
+            <td width="17%">
+              <b>Civilité</b>
+            </td>
+
+            <td width="45%">
+              <input type="radio" name="civilite" value="Mademoiselle" />
+              Mademoiselle
+
+              <input type="radio" name="civilite" value="Madame" checked />
+              Madame
+
+              <input type="radio" name="civilite" value="Monsieur" />
+              Monsieur
+            </td>
+
+            <td width="38%">
+              <input type="text" name="display" size="15" />
+            </td>
+          </tr>
+
+          <tr>
+            <td id="LNom">
+              <b>Nom / Prénom</b>
+            </td>
+
+            <td>
+              <input type="text" id="C1" name="nom" size="50" maxlength="80" />
+            </td>
+
+            <td id="T2"></td>
+          </tr>
+
+          <tr>
+            <td id="LAdresse">
+              <b>Adresse</b>
+            </td>
+
+            <td>
+              <textarea id="C2" name="adresse" cols="50" rows="2"></textarea>
+            </td>
+
+            <td id="T3"></td>
+          </tr>
+
+          <tr>
+            <td id="LPostal">
+              <b>No postal / Localité</b>
+            </td>
+
+            <td>
+              <input
+                id="C3"
+                type="text"
+                name="no_postal"
+                size="5"
+                maxlength="4"
+              />
+
+              <input id="C4" type="text" name="localite" size="20" readonly />
+            </td>
+
+            <td id="T4"></td>
+          </tr>
+
+          <tr>
+            <td>
+              <b>Pays</b>
+            </td>
+
+            <td>
+              <select id="lepays" name="pays">
+                <option>Tunisie</option>
+                <option>Algérie</option>
+                <option selected>Maroc</option>
+              </select>
+
+              <b>Ajouter pays</b>
+
+              <input id="C5" type="text" name="monpays" value="Libye" />
+
+              <button type="button" onclick="AjouterPays()">
+                Ajouter pays
+              </button>
+            </td>
+
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>
+              <b>Plateforme(s)</b>
+            </td>
+
+            <td>
+              <input type="checkbox" name="materiel" value="Windows" checked />
+              Windows
+
+              <input type="checkbox" name="materiel" value="Mac" checked />
+              Macintosh
+
+              <input type="checkbox" name="materiel" value="Unix" />
+              Unix
+            </td>
+
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>
+              <b>Application(s)</b>
+            </td>
+
+            <td>
+              <select name="applications" size="5" multiple>
+                <option selected>Bureautique</option>
+                <option>DAO</option>
+                <option>Statistiques</option>
+                <option>SGBD</option>
+                <option selected>Internet</option>
+              </select>
+            </td>
+
+            <td></td>
+          </tr>
+        </table>
+      </fieldset>
+
+      <br />
+
+      <center>
+        <input
+          type="button"
+          value="Soumettre formulaire"
+          onclick="AfficherAlert()"
+        />
+
+        <input
+          type="button"
+          value="Vérification formulaire"
+          onclick="VerifierFormulaire()"
+        />
+
+        <input type="button" value="Enregistrer" onclick="Enregistrer()" />
+
+        <input type="button" value="Récupérer" onclick="Recuperer()" />
+
+        <input type="reset" value="Effacer" />
+      </center>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>

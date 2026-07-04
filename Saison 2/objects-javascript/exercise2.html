@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exercice 2 - Math</title>
+  </head>
+  <body>
+    <h2>Manipulation de nombres</h2>
+
+    <input type="number" id="nombre" placeholder="Entrez un nombre" />
+    <button onclick="calculer()">Calculer</button>
+
+    <p id="racine"></p>
+    <p id="arrondi"></p>
+    <p id="alea"></p>
+
+    <script>
+      function calculer() {
+        let n = Number(document.getElementById("nombre").value);
+
+        document.getElementById("racine").textContent =
+          "Racine carrée : " + Math.sqrt(n);
+
+        document.getElementById("arrondi").textContent =
+          "Arrondi : " + Math.round(n);
+      }
+
+      function Aleatoire() {
+        return Math.floor(Math.random() * 100) + 1;
+      }
+
+      function Aleatoire2(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+
+      document.getElementById("alea").textContent =
+        "Nombre aléatoire (1-100) : " + Aleatoire();
+    </script>
+  </body>
+</html>

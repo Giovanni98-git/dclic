@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exercice 3</title>
+  </head>
+  <body>
+    <h1>Exercice 3</h1>
+    <script>
+      // 1 - les nombres premiers entre 1 et 100
+      function estPremier(n) {
+        if (n < 2) return false;
+        for (let i = 2; i <= Math.sqrt(n); i++) {
+          if (n % i === 0) return false;
+        }
+        return true;
+      }
+
+      let premiers = "";
+
+      for (let i = 1; i <= 100; i++) {
+        if (estPremier(i)) {
+          premiers += i + " ";
+        }
+      }
+
+      console.log("Nombres premiers :", premiers);
+
+      // 2 - Facteurs d'un nombre
+      let nombre = Number(prompt("Entrez un nombre :"));
+      let facteurs = "";
+
+      for (let i = 1; i <= nombre; i++) {
+        if (nombre % i === 0) {
+          facteurs += i + " ";
+        }
+      }
+
+      alert("Facteurs : " + facteurs);
+
+      // 3- moyenne d'une série de nombres
+      let somme = 0;
+      let count = 0;
+      let nombreSaisi;
+
+      while (true) {
+        nombreSaisi = Number(
+          prompt("Entrez un nombre (négatif pour arrêter) :")
+        );
+        if (nombreSaisi < 0) break;
+        somme += nombreSaisi;
+        count++;
+      }
+
+      if (count > 0) {
+        alert("Moyenne : " + somme / count);
+      } else {
+        alert("Aucun nombre positif saisi");
+      }
+
+      // 4 - Motif triangulaire avec étoiles
+
+      let hauteur = Number(prompt("Entrez la hauteur du triangle :"));
+      let triangle = "";
+
+      for (let i = 1; i <= hauteur; i++) {
+        triangle += "*".repeat(2 * i - 1) + "\n";
+      }
+
+      console.log(triangle);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giovanni Marc - Développeur Back-End</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav>
+      <div class="container">
+        <div class="logo">MARC <span>GIOVANNI</span></div>
+        <ul>
+          <li><a href="#accueil" class="nav-link active">Accueil</a></li>
+          <li><a href="#apropos" class="nav-link">À propos</a></li>
+          <li><a href="#projets" class="nav-link">Projets</a></li>
+          <li><a href="#competences" class="nav-link">Compétences</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Accueil -->
+    <section id="accueil">
+      <div class="container">
+        <div class="hero">
+          <div class="hero-text">
+            <h1>
+              Je suis <span class="highlight">Giovanni MARC</span>, Développeur
+              Back-End passionné par le web et les technologies !
+            </h1>
+            <p>
+              Spécialisé en développement d'APIs et solutions logicielles
+              performantes
+            </p>
+            <a href="#projets" class="cta-button">Voir mes projets</a>
+          </div>
+          <div class="hero-image">
+            <img src="images/accueil.jpg" alt="Developer illustration" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- À propos -->
+    <section id="apropos">
+      <div class="container">
+        <div class="about-content">
+          <div class="about-text">
+            <h2>À propos</h2>
+            <p>
+              Je m'appelle <span class="highlight">Giovanni Marc</span>,
+              passionné par la création de sites web modernes et interactifs.
+            </p>
+            <p>
+              Je suis actuellement étudiant(e) en
+              <span class="highlight">développement web</span>, et je cherche à
+              améliorer mes compétences en JavaScript, HTML et CSS.
+            </p>
+            <p>
+              J'adore transformer mes idées en projets concrets et expérimenter
+              avec les nouvelles technologies.
+            </p>
+            <p>
+              <strong>Formation :</strong> Licence en mathématiques
+              fondamentales - Université d'Abomey-Calavi, Bénin (2024)
+            </p>
+            <p>
+              <strong>Certification :</strong> Ingénieur associé en SQL -
+              Datacamp (juillet 2025)
+            </p>
+            <a
+              class="cta-button"
+              target="_blank"
+              href="files/Giovanni_MARC_CV.pdf"
+              >Télécharger mon CV</a
+            >
+          </div>
+          <div class="profile-image">
+            <img
+              src="images/about.jpg"
+              alt="Giovanni Marc"
+              class="profile-img"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projets -->
+    <section id="projets">
+      <div class="container">
+        <h2 class="section-title">Mes Projets</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <h3>API REST en Rust avec OCI ZOT Registry</h3>
+            <p>
+              Développement d'une API REST en Rust interagissant avec OCI ZOT
+              Registry pour le stockage de fichiers WebAssembly avec
+              optimisation de la performance.
+            </p>
+            <div class="project-tags">#rust #actix-web #webassembly</div>
+            <button class="project-button" onclick="showProject('rust-api')">
+              Voir
+            </button>
+          </div>
+          <div class="project-card">
+            <h3>API de Gestion de Stocks</h3>
+            <p>
+              Développement d'une API backend complète pour la gestion de stocks
+              avec authentification et opérations CRUD sécurisées.
+            </p>
+            <div class="project-tags">#node.js #postgresql #api-rest</div>
+            <button
+              class="project-button"
+              onclick="showProject('gestion-stocks')"
+            >
+              Voir
+            </button>
+          </div>
+          <div class="project-card">
+            <h3>Fazioprod Backend</h3>
+            <p>
+              Conception et développement d'une API backend pour le site
+              www.fazioprod.com avec intégration de services tiers.
+            </p>
+            <div class="project-tags">#django #python #api</div>
+            <button class="project-button" onclick="showProject('fazioprod')">
+              Voir
+            </button>
+          </div>
+          <div class="project-card">
+            <h3>Smart Contract Solidity</h3>
+            <p>
+              Développement d'un smart contract en Solidity dans un projet
+              Hardhat pour la blockchain Ethereum.
+            </p>
+            <div class="project-tags">#solidity #blockchain #hardhat</div>
+            <button
+              class="project-button"
+              onclick="showProject('smart-contract')"
+            >
+              Voir
+            </button>
+          </div>
+          <div class="project-card">
+            <h3>API PHP sans Framework</h3>
+            <p>
+              Développement d'une API REST complète en PHP sans framework, avec
+              gestion de l'authentification et des routes personnalisées.
+            </p>
+            <div class="project-tags">#php #mysql #api-rest</div>
+            <button class="project-button" onclick="showProject('php-api')">
+              Voir
+            </button>
+          </div>
+          <div class="project-card">
+            <h3>Django REST Framework</h3>
+            <p>
+              Création d'une API complète avec Django Rest Framework incluant
+              authentification JWT et permissions personnalisées.
+            </p>
+            <div class="project-tags">#django #python #drf</div>
+            <button class="project-button" onclick="showProject('django-api')">
+              Voir
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Compétences -->
+    <section id="competences">
+      <div class="container">
+        <h2 class="section-title">Mes Compétences</h2>
+        <div class="skills-container">
+          <div class="skills-section">
+            <h3>Soft Skills</h3>
+            <div class="skill-item">
+              <div class="skill-name">Gestion de projet</div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="75"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">Résolution de problème</div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="85"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">Adaptabilité</div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="90"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">Travail en équipe</div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="80"></div>
+              </div>
+            </div>
+          </div>
+          <div class="skills-section">
+            <h3>Hard Skills</h3>
+            <div class="skill-item">
+              <div class="skill-name">Rust & Actix-web</div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="85"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">JavaScript / Node.js</div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="90"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">Python / Django</div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="85"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">SQL / PostgreSQL</div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="88"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-name">Git / GitHub</div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="92"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title">
+          Vous avez un
+          <span class="highlight">projet en tête ? </span> <br />N'hésitez pas à
+          me <span class="highlight">contacter</span>
+        </h2>
+        <div class="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="prenom">Votre prénom</label>
+              <input type="text" id="prenom" placeholder="Prénom" />
+            </div>
+            <div class="form-group">
+              <label for="nom">Votre nom</label>
+              <input type="text" id="nom" placeholder="Nom" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="sujet">Votre sujet</label>
+            <input
+              type="text"
+              id="sujet"
+              placeholder="Parlez-moi un peu du sujet de votre demande"
+            />
+          </div>
+          <div class="form-group">
+            <label for="message">Votre message</label>
+            <textarea
+              id="message"
+              placeholder="Laissez votre message ici"
+            ></textarea>
+          </div>
+          <button class="submit-button" onclick="validateForm()">
+            Envoyer
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>
+        Designed by <span class="highlight">Giovanni Marc</span> with HTML CSS
+        JS
+      </p>
+      <p>Tous droits réservés - 2026</p>
+    </footer>
+
+    <!-- Modal -->
+    <div id="projectModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <p id="modalDescription"></p>
+        <div id="modalDetails"></div>
+        <!-- <a class="modalButton"> > </a> -->
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

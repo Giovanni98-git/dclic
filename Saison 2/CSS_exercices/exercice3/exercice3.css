@@ -1,0 +1,23 @@
+body {
+  background-color: whitesmoke;
+}
+
+#second-text {
+  font-weight: bold;
+}
+
+.first-text {
+  font-style: italic;
+}
+
+.item-highlight {
+  color: blue;
+}
+
+[class^="a"] {
+  background-color: yellow;
+}
+
+[class$="date"] {
+  background-color: green;
+}
